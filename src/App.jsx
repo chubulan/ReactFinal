@@ -66,7 +66,7 @@ const WeatherApp = () => {
   const [selectedDate, setSelectedDate] = useState(null);
 
   useEffect(() => {
-    fetch(`http://api.weatherapi.com/v1/forecast.json?key=${API_KEY}&q=${location}&days=7&aqi=no&alerts=no`)
+    fetch(`https://api.weatherapi.com/v1/forecast.json?key=${API_KEY}&q=${location}&days=7&aqi=no&alerts=no`)
       .then((response) => response.json())
       .then((data) => {
         setForecast(data.forecast.forecastday);
